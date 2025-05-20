@@ -16,13 +16,13 @@ export default function Home() {
       <header className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold text-blue-800">Predator Deterrent System</h1>
         <nav className="flex space-x-4">
-          <Link href="/Settings">
+          <Link href="/settings">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Settings</button>
           </Link>
-          <Link href="/Deterrent">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Deterrent</button>
+          <Link href="/detect">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Detect</button>
           </Link>
-          <Link href="/History">
+          <Link href="/history">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">History</button>
           </Link>
         </nav>
