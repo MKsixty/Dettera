@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Predator Dettera
+
+A smart wildlife detection and deterrence system built with Next.js that helps monitor and manage wildlife interactions using automated detection and customizable deterrence methods.
+
+## Features
+
+- 🦊 Wildlife Detection: Automatically detects and classifies different types of animals (Penguin, Deer, Fox)
+- 📸 Image Management: Stores and manages detection images with timestamps
+- 🚨 Deterrence System: Configurable deterrence methods including:
+  - LED controls (frequency and duty cycle)
+  - Speaker controls (frequency and duty cycle)
+  - Motor controls (ON/OFF)
+- 📊 Detection Records: Maintains detailed logs of all detections and deterrence actions
+- 🌐 REST API: Full API support for retrieving detections and adding new records
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/predator_dettera.git
+cd predator_dettera
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-## Learn More
+## API Endpoints
 
-To learn more about Next.js, take a look at the following resources:
+### GET /api/detections
+Retrieves all detection records with their associated images and deterrence settings.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### POST /api/detections
+Add a new detection record with the following structure:
+```json
+{
+  "image": "base64_encoded_image",
+  "timestamp": "YYYY-MM-DD HH:mm:ss",
+  "animalType": "Penguin|Deer|Fox",
+  "duration": 2.5,
+  "deterrence": {
+    "LED": {
+      "frequency": 50,
+      "dutyCycle": 0.5
+    },
+    "Speaker": {
+      "frequency": 500,
+      "dutyCycle": 0.5
+    },
+    "motor": "ON|OFF"
+  }
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+- `/public/mock`: Contains mock images and detection records for testing
+- `/src/app/api`: API routes for handling detections
+- `/src/app/components`: React components for the UI
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
