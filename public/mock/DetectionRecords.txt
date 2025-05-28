@@ -1,0 +1,24 @@
+Image Name: Image_20250527_200152.jpg
+Duration: 2.443070888519287
+Deterrence:
+  LED: Frequency = 50, Duty Cycle = 0.5
+  Speaker: Frequency = 500, Duty Cycle = 0.5
+  motor: ON
+
+========================================
+Image Name: Image_20250527_200203.jpg
+Duration: 3.3416190147399902
+Deterrence:
+  LED: Frequency = 500, Duty Cycle = 0.5
+  Speaker: Frequency = 500, Duty Cycle = 0.5
+  motor: ON
+
+========================================
+Image Name: Image_20250527_200230.jpg
+Duration: 4.542267322540283
+Deterrence:
+  LED: Frequency = 500, Duty Cycle = 0.5
+  Speaker: Frequency = 500, Duty Cycle = 0.5
+  motor: ON
+
+========================================
