@@ -153,7 +153,7 @@ export default function DetectPage() {
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
           {/* Recent Detection Panel */}
           <section className="bg-white shadow-md rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 text-gray-800">Latest Honey Badger Detection</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-800">Latest Detection</h2>
             {lastDetection ? (
               <div className="space-y-6">
                 <div className="flex flex-col space-y-4">
